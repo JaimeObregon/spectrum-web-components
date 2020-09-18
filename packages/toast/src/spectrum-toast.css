@@ -244,20 +244,10 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     color: #fff; /* .spectrum-Toast-typeIcon */
 }
 :host([dir='ltr']) .buttons {
-    border-left-color: hsla(
-        0,
-        0%,
-        100%,
-        0.2
-    ); /* [dir=ltr] .spectrum-Toast-buttons */
+    border-left-color: #fff3; /* [dir=ltr] .spectrum-Toast-buttons */
 }
 :host([dir='rtl']) .buttons {
-    border-right-color: hsla(
-        0,
-        0%,
-        100%,
-        0.2
-    ); /* [dir=rtl] .spectrum-Toast-buttons */
+    border-right-color: #fff3; /* [dir=rtl] .spectrum-Toast-buttons */
 }
 :host([variant='warning']) {
     background-color: var(

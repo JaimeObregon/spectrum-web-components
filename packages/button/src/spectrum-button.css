@@ -773,7 +773,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host([variant='overBackground'][disabled]) {
     background-color: var(
         --spectrum-button-over-background-m-background-color-disabled,
-        rgba(255, 255, 255, 0.1)
+        #ffffff1a
     ); /* .spectrum-Button--overBackground:disabled,
    * .spectrum-Button--overBackground.is-disabled */
     border-color: var(
@@ -782,7 +782,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     );
     color: var(
         --spectrum-button-over-background-m-text-color-disabled,
-        rgba(255, 255, 255, 0.35)
+        #ffffff59
     );
 }
 :host([variant='overBackground'][quiet]) {
@@ -803,7 +803,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host([variant='overBackground'][quiet]:hover) {
     background-color: var(
         --spectrum-button-quiet-over-background-m-background-color-hover,
-        rgba(255, 255, 255, 0.1)
+        #ffffff1a
     ); /* .spectrum-Button--overBackground.spectrum-Button--quiet:hover,
    * .spectrum-ClearButton--overBackground:hover */
     border-color: var(
@@ -818,7 +818,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host([variant='overBackground'][quiet]:focus-visible) {
     background-color: var(
         --spectrum-button-quiet-over-background-m-background-color-hover,
-        rgba(255, 255, 255, 0.1)
+        #ffffff1a
     ); /* .spectrum-Button--overBackground.spectrum-Button--quiet.focus-ring,
    * .spectrum-ClearButton--overBackground.focus-ring */
     border-color: var(
@@ -846,7 +846,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host([variant='overBackground'][quiet][active]) {
     background-color: var(
         --spectrum-button-quiet-over-background-m-background-color-down,
-        rgba(255, 255, 255, 0.2)
+        #fff3
     ); /* .spectrum-Button--overBackground.spectrum-Button--quiet:active,
    * .spectrum-ClearButton--overBackground:active */
     border-color: var(
@@ -873,7 +873,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     );
     color: var(
         --spectrum-button-quiet-over-background-m-text-color-disabled,
-        rgba(255, 255, 255, 0.15)
+        #ffffff26
     );
 }
 :host([variant='primary'][quiet]) {

@@ -52,17 +52,8 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
         'sans-serif'
     ); /* .spectrum:lang(zh-Hans) */
 }
+.spectrum:lang(zh),
 .spectrum:lang(zh-Hant) {
-    font-family: var(
-        --spectrum-alias-font-family-zh,
-        adobe-clean-han-traditional,
-        source-han-traditional,
-        'MingLiu',
-        'Heiti TC Light',
-        'sans-serif'
-    ); /* .spectrum:lang(zh-Hant) */
-}
-.spectrum:lang(zh) {
     font-family: var(
         --spectrum-alias-font-family-zh,
         adobe-clean-han-traditional,

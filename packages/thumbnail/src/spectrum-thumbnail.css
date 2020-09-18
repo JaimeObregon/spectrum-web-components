@@ -115,23 +115,23 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     ); /* .spectrum-Thumbnail */
     background-image: linear-gradient(
             -45deg,
-            transparent 75.5%,
+            #0000 75.5%,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 75.5%
         ),
         linear-gradient(
             45deg,
-            transparent 75.5%,
+            #0000 75.5%,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 75.5%
         ),
         linear-gradient(
             -45deg,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 25.5%,
-            transparent 25.5%
+            #0000 25.5%
         ),
         linear-gradient(
             45deg,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 25.5%,
-            transparent 25.5%
+            #0000 25.5%
         );
 }
 :host:before {

@@ -115,17 +115,17 @@ p {
             --spectrum-tooltip-tip-width,
             var(--spectrum-global-dimension-size-100)
         )
-        solid transparent;
+        solid #0000;
     border-left: var(
             --spectrum-tooltip-tip-width,
             var(--spectrum-global-dimension-size-100)
         )
-        solid transparent;
+        solid #0000;
     border-right: var(
             --spectrum-tooltip-tip-width,
             var(--spectrum-global-dimension-size-100)
         )
-        solid transparent;
+        solid #0000;
     border-top-style: solid;
     border-top-width: var(
         --spectrum-tooltip-tip-width,

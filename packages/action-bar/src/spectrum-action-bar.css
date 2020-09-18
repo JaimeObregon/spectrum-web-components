@@ -61,7 +61,8 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     left: 0; /* [dir=rtl] .spectrum-ActionBar--sticky */
 }
 :host([variant='sticky']) {
-    position: sticky; /* .spectrum-ActionBar--sticky */
+    position: -webkit-sticky; /* .spectrum-ActionBar--sticky */
+    position: sticky;
 }
 :host([flexible]) #popover {
     width: auto; /* .spectrum-ActionBar--flexible .spectrum-ActionBar-popover */

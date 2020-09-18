@@ -89,7 +89,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
             --spectrum-tabs-m-focus-ring-size,
             var(--spectrum-alias-border-size-thick)
         )
-        solid transparent;
+        solid #0000;
     border-radius: var(
         --spectrum-sidenav-item-border-radius,
         var(--spectrum-alias-border-radius-regular)
@@ -98,7 +98,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
             --spectrum-tabs-m-focus-ring-size,
             var(--spectrum-alias-border-size-thick)
         )
-        solid transparent;
+        solid #0000;
     bottom: 0;
     content: ''; /* .spectrum-SideNav-itemLink.focus-ring:before */
     position: absolute;

@@ -11,11 +11,10 @@ governing permissions and limitations under the License.
 
 THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host([dir='ltr']) {
-    border-left: var(--spectrum-listitem-focus-indicator-size) solid transparent; /* [dir=ltr] .spectrum-Menu-item */
+    border-left: var(--spectrum-listitem-focus-indicator-size) solid #0000; /* [dir=ltr] .spectrum-Menu-item */
 }
 :host([dir='rtl']) {
-    border-right: var(--spectrum-listitem-focus-indicator-size) solid
-        transparent; /* [dir=rtl] .spectrum-Menu-item */
+    border-right: var(--spectrum-listitem-focus-indicator-size) solid #0000; /* [dir=rtl] .spectrum-Menu-item */
 }
 :host {
     align-items: center;

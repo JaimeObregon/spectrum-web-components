@@ -65,7 +65,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     ); /* [dir=rtl] .spectrum-Tabs-item:before */
 }
 :host:before {
-    border: var(--spectrum-tabs-focus-ring-size) solid transparent;
+    border: var(--spectrum-tabs-focus-ring-size) solid #0000;
     border-radius: var(--spectrum-tabs-focus-ring-border-radius);
     box-sizing: border-box;
     content: ''; /* .spectrum-Tabs-item:before */

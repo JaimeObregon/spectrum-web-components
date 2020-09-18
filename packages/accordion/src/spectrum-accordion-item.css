@@ -49,7 +49,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
             --spectrum-accordion-item-border-size,
             var(--spectrum-alias-border-size-thin)
         )
-        solid transparent;
+        solid #0000;
     display: list-item;
     margin: 0;
     position: relative;
@@ -60,7 +60,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
             --spectrum-accordion-item-border-size,
             var(--spectrum-alias-border-size-thin)
         )
-        solid transparent; /* .spectrum-Accordion-item:first-of-type */
+        solid #0000; /* .spectrum-Accordion-item:first-of-type */
 }
 #heading {
     box-sizing: border-box;
@@ -269,12 +269,12 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     ); /* .spectrum-Accordion-itemHeader.focus-ring:after */
 }
 :host([open]) #header:hover {
-    background-color: transparent; /* .spectrum-Accordion-item.is-open .spectrum-Accordion-itemHeader:hover */
+    background-color: initial; /* .spectrum-Accordion-item.is-open .spectrum-Accordion-itemHeader:hover */
 }
 :host([disabled]) #header,
 :host([disabled]) #header:focus-visible,
 :host([disabled]) #header:hover {
-    background-color: transparent;
+    background-color: initial;
     color: var(
         --spectrum-accordion-text-color-disabled,
         var(--spectrum-global-color-gray-500)

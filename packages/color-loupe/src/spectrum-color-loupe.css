@@ -65,10 +65,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
         --spectrum-colorloupe-inner-border-color,
         var(--spectrum-global-color-static-white)
     );
-    stroke: var(
-        --spectrum-colorloupe-outer-border-color,
-        rgba(50, 50, 50, 0.1)
-    );
+    stroke: var(--spectrum-colorloupe-outer-border-color, #3232321a);
 }
 @media (forced-colors: active) {
     :host {

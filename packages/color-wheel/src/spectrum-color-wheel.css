@@ -86,7 +86,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 .innerCircle,
 .outerCircle {
-    fill: transparent; /* .spectrum-ColorWheel-outerCircle,
+    fill: #0000; /* .spectrum-ColorWheel-outerCircle,
    * .spectrum-ColorWheel-innerCircle */
     stroke-width: var(
         --spectrum-colorwheel-border-size,

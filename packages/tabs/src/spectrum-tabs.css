@@ -186,7 +186,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 :host([direction='horizontal'][compact]) #list {
     align-items: end;
-    box-sizing: content-box; /* .spectrum-Tabs--horizontal.spectrum-Tabs--compact */
+    box-sizing: initial; /* .spectrum-Tabs--horizontal.spectrum-Tabs--compact */
     height: var(--spectrum-tabs-compact-item-height);
 }
 :host([quiet]) #list {

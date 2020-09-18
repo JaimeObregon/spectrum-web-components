@@ -804,7 +804,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
         ); /* .spectrum-Slider--ramp .spectrum-Slider-handle */
 }
 .input {
-    background: transparent; /* .spectrum-Slider-input */
+    background: #0000; /* .spectrum-Slider-input */
 }
 .tick:after {
     background-color: var(

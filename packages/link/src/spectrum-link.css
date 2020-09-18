@@ -47,7 +47,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 a {
     -webkit-text-decoration-skip: objects;
-    background-color: transparent; /* .spectrum-Link */
+    background-color: initial; /* .spectrum-Link */
     cursor: pointer;
     outline: none;
     text-decoration: underline;

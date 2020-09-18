@@ -107,10 +107,6 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
         var(--spectrum-global-dimension-static-size-200, 16px); /* .spectrum-ColorSlider-checkerboard */
 }
 .checkerboard:before {
-    border-radius: var(
-        --spectrum-colorslider-border-radius,
-        var(--spectrum-alias-border-radius-regular)
-    );
     bottom: 0;
     content: ''; /* .spectrum-ColorSlider-checkerboard:before */
     left: 0;
@@ -120,11 +116,15 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     z-index: 1;
 }
 .checkerboard,
+.checkerboard:before,
 .gradient {
     border-radius: var(
         --spectrum-colorslider-border-radius,
         var(--spectrum-alias-border-radius-regular)
     );
+}
+.checkerboard,
+.gradient {
     height: 100%;
     width: 100%; /* .spectrum-ColorSlider-gradient,
    * .spectrum-ColorSlider-checkerboard */
@@ -141,23 +141,23 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     ); /* .spectrum-ColorSlider-checkerboard */
     background-image: linear-gradient(
             -45deg,
-            transparent 75.5%,
+            #0000 75.5%,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 75.5%
         ),
         linear-gradient(
             45deg,
-            transparent 75.5%,
+            #0000 75.5%,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 75.5%
         ),
         linear-gradient(
             -45deg,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 25.5%,
-            transparent 25.5%
+            #0000 25.5%
         ),
         linear-gradient(
             45deg,
             var(--spectrum-global-color-static-gray-500, #bcbcbc) 25.5%,
-            transparent 25.5%
+            #0000 25.5%
         );
 }
 .checkerboard:before {
