@@ -3107,16 +3107,7 @@
     "@open-wc/rollup-plugin-html" "^1.2.5"
     polyfills-loader "^1.7.5"
 
-"@open-wc/scoped-elements@^2.0.0-next.0":
-  version "2.0.0-next.5"
-  resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-2.0.0-next.5.tgz#46ce9abe3bedbb8c7dc098839f21fe442a93c0c1"
-  integrity sha512-yprRHBRDDKhS3CacWi8+UJHG+avhMUO8k6X91AQiHHOcIO4P9E8v2skdGg4bhE2fF/tg5wVex8Sa5ZlsZ21pDg==
-  dependencies:
-    "@lit/reactive-element" "^1.0.0-rc.1"
-    "@open-wc/dedupe-mixin" "^1.3.0"
-    "@webcomponents/scoped-custom-element-registry" "0.0.2"
-
-"@open-wc/scoped-elements@^2.0.0-next.3":
+"@open-wc/scoped-elements@^2.0.0-next.0", "@open-wc/scoped-elements@^2.0.0-next.3":
   version "2.0.0-next.4"
   resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-2.0.0-next.4.tgz#d8294358e3e8ad2ba44200ab805549fde49245f6"
   integrity sha512-BMd5n5BHLi3FBhwhPbBuN7pZdi8I1CIQn10aKLZtg9aplVhN2BG1rwr0ANebXJ6fdq8m1PE1wQAaCXYCcEBTEQ==
@@ -3792,9 +3783,9 @@
   integrity sha512-jRJgpRBuY+7izT7/WNXP/LsMO9YonsstuL+xuvycDyESpoDoIAsMd7suwpB4h9oEWB+ZlPTqJJ8EHomzNhwTPQ==
 
 "@types/chai@^4.2.12":
-  version "4.2.22"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.22.tgz#47020d7e4cf19194d43b5202f35f75bd2ad35ce7"
-  integrity sha512-tFfcE+DSTzWAgifkjik9AySNqIyNoYwmR+uecPwwD/XRNfvOjmC/FjCxpiUGDkDVDphPfCUecSQVFw+lN3M3kQ==
+  version "4.2.21"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.21.tgz#9f35a5643129df132cf3b5c1ec64046ea1af0650"
+  integrity sha512-yd+9qKmJxm496BOV9CMNaey8TWsikaZOwMRwPHQIjcOJM9oV+fi9ZMNw3JsVnbEEbo2gRTDnGEBv8pjyn67hNg==
 
 "@types/clean-css@*":
   version "4.2.3"
