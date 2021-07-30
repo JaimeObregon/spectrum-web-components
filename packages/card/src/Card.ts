@@ -85,13 +85,6 @@ export class Card extends ObserveSlotPresence(
         return this.getSlotContentPresence('[slot="preview"]');
     }
 
-    public constructor() {
-        super();
-        this.addEventListener('focusin', this.handleFocusin);
-        this.shadowRoot.addEventListener('focusin', this.handleFocusin);
-        this.addEventListener('focusout', this.handleFocusout);
-    }
-
     private handleFocusin = (event: Event): void => {
         this.focused = true;
         const target = event.composedPath()[0];
@@ -255,5 +248,8 @@ export class Card extends ObserveSlotPresence(
         super.firstUpdated(changes);
         this.setAttribute('role', 'figure');
         this.tabIndex = 0;
+        this.addEventListener('focusin', this.handleFocusin);
+        this.shadowRoot.addEventListener('focusin', this.handleFocusin);
+        this.addEventListener('focusout', this.handleFocusout);
     }
 }

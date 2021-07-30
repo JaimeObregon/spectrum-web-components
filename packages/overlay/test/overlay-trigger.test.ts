@@ -149,18 +149,18 @@ describe('Overlay Trigger', () => {
         });
 
         afterEach(async () => {
-            outerTrigger.removeAttribute('type');
             if (outerTrigger.open) {
                 const closed = oneEvent(outerTrigger, 'sp-closed');
                 outerTrigger.open = undefined;
                 await closed;
             }
-            innerTrigger.removeAttribute('type');
+            outerTrigger.removeAttribute('type');
             if (innerTrigger.open) {
                 const closed = oneEvent(innerTrigger, 'sp-closed');
                 innerTrigger.open = undefined;
                 await closed;
             }
+            innerTrigger.removeAttribute('type');
         });
 
         it('loads', async () => {
@@ -247,7 +247,7 @@ describe('Overlay Trigger', () => {
             expect(isVisible(outerClickContent)).to.be.true;
         });
 
-        ['inline', 'modal', 'replace'].map((type: string) => {
+        ['modal', 'replace', 'inline'].map((type: string) => {
             it(`opens a popover - [type="${type}"]`, async () => {
                 outerTrigger.type = type as Extract<
                     TriggerInteractions,
@@ -258,16 +258,9 @@ describe('Overlay Trigger', () => {
                 expect(isVisible(outerClickContent)).to.be.false;
 
                 expect(outerButton).to.exist;
+                const opened = oneEvent(outerTrigger, 'sp-opened');
                 outerButton.click();
-
-                // Wait for the DOM node to be stolen and reparented into the overlay
-                await waitForPredicate(
-                    () =>
-                        !(
-                            outerClickContent.parentElement instanceof
-                            OverlayTrigger
-                        )
-                );
+                await opened;
 
                 expect(outerClickContent.parentElement).to.not.be.an.instanceOf(
                     OverlayTrigger
@@ -499,27 +492,25 @@ describe('Overlay Trigger', () => {
         });
 
         it('escape closes an open popover', async () => {
+            outerTrigger.type = 'modal';
+            innerTrigger.type = 'modal';
+            const outerOpen = oneEvent(outerButton, 'sp-opened');
             outerButton.click();
+            await outerOpen;
 
-            await waitUntil(
-                () =>
-                    !(
-                        outerClickContent.parentElement instanceof
-                        OverlayTrigger
-                    ),
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
                 'outer content stolen and reparented'
-            );
+            ).to.be.false;
 
+            const innerOpen = oneEvent(innerButton, 'sp-opened');
             innerButton.click();
+            await innerOpen;
 
-            await waitUntil(
-                () =>
-                    !(
-                        innerClickContent.parentElement instanceof
-                        OverlayTrigger
-                    ),
+            expect(
+                innerClickContent.parentElement instanceof OverlayTrigger,
                 'inner content stolen and reparented'
-            );
+            ).to.be.false;
 
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.true;
@@ -529,49 +520,49 @@ describe('Overlay Trigger', () => {
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.true;
 
+            const innerClose = oneEvent(innerButton, 'sp-closed');
             pressEscape();
+            await innerClose;
 
-            await waitUntil(
-                () => innerClickContent.parentElement instanceof OverlayTrigger,
+            expect(
+                innerClickContent.parentElement instanceof OverlayTrigger,
                 'inner content returned'
-            );
-
+            ).to.be.true;
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.false;
 
+            const outerClose = oneEvent(outerButton, 'sp-closed');
             pressEscape();
+            await outerClose;
 
-            await waitUntil(
-                () => outerClickContent.parentElement instanceof OverlayTrigger,
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
                 'outer content returned'
-            );
-
+            ).to.be.true;
             expect(isVisible(outerClickContent)).to.be.false;
             expect(isVisible(innerClickContent)).to.be.false;
         });
 
         it('click closes an open popover', async () => {
+            outerTrigger.type = 'modal';
+            innerTrigger.type = 'modal';
+            const outerOpen = oneEvent(outerButton, 'sp-opened');
             outerButton.click();
+            await outerOpen;
 
-            await waitUntil(
-                () =>
-                    !(
-                        outerClickContent.parentElement instanceof
-                        OverlayTrigger
-                    ),
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
                 'outer content stolen and reparented'
-            );
+            ).to.be.false;
 
+            const innerOpen = oneEvent(innerButton, 'sp-opened');
             innerButton.click();
+            await innerOpen;
 
-            await waitUntil(
-                () =>
-                    !(
-                        innerClickContent.parentElement instanceof
-                        OverlayTrigger
-                    ),
+            expect(
+                innerClickContent.parentElement instanceof OverlayTrigger,
                 'inner content stolen and reparented'
-            );
+            ).to.be.false;
 
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.true;
@@ -584,25 +575,25 @@ describe('Overlay Trigger', () => {
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.true;
 
+            const innerClose = oneEvent(innerButton, 'sp-closed');
             document.body.click();
+            await innerClose;
 
-            // Wait for the DOM node to be put back in its original place
-            await waitUntil(
-                () => innerClickContent.parentElement instanceof OverlayTrigger,
-                'outer content returned'
-            );
-
+            expect(
+                innerClickContent.parentElement instanceof OverlayTrigger,
+                'inner content returned'
+            ).to.be.true;
             expect(isVisible(outerClickContent)).to.be.true;
             expect(isVisible(innerClickContent)).to.be.false;
 
+            const outerClose = oneEvent(outerButton, 'sp-closed');
             document.body.click();
+            await outerClose;
 
-            // Wait for the DOM node to be put back in its original place
-            await waitUntil(
-                () => outerClickContent.parentElement instanceof OverlayTrigger,
-                'inner content returned'
-            );
-
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
+                'outer content returned'
+            ).to.be.true;
             expect(isVisible(outerClickContent)).to.be.false;
             expect(isVisible(innerClickContent)).to.be.false;
         });
@@ -684,35 +675,33 @@ describe('Overlay Trigger', () => {
             outerTrigger.addEventListener('sp-opened', openedSpy);
             outerTrigger.addEventListener('sp-closed', closedSpy);
 
+            const outerOpen = oneEvent(outerButton, 'sp-opened');
             outerButton.click();
+            await outerOpen;
 
-            await waitUntil(
-                () =>
-                    !(
-                        outerClickContent.parentElement instanceof
-                        OverlayTrigger
-                    ),
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
                 'outer content stolen and reparented'
-            );
+            ).to.be.false;
 
-            await waitUntil(() => openedSpy.calledOnce, 'opened event sent');
-
+            expect(openedSpy.calledOnce, 'opened event sent').to.be.true;
             expect(isVisible(outerClickContent)).to.be.true;
-            expect(closed).to.be.false;
+            expect(outerTrigger.open).to.equal('click');
 
             const openedEvent = openedSpy
                 .args[0][0] as CustomEvent<OverlayOpenCloseDetail>;
             expect(openedEvent.detail.interaction).to.equal('click');
 
+            const outerClose = oneEvent(outerButton, 'sp-closed');
             document.body.click();
+            await outerClose;
 
-            // Wait for the DOM node to be put back in its original place
-            await waitUntil(
-                () => outerClickContent.parentElement instanceof OverlayTrigger,
-                'inner content returned'
-            );
-
-            await waitUntil(() => closedSpy.calledOnce, 'closed event sent');
+            expect(
+                outerClickContent.parentElement instanceof OverlayTrigger,
+                'outer content returned'
+            ).to.be.true;
+            expect(outerTrigger.open).to.be.null;
+            expect(closedSpy.calledOnce, 'closed event sent').to.be.true;
 
             const closedEvent = closedSpy
                 .args[0][0] as CustomEvent<OverlayOpenCloseDetail>;
