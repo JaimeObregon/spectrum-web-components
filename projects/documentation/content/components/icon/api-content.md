@@ -1,0 +1,816 @@
+---
+layout: partial.njk
+title: 'Icon: Spectrum Web Components'
+displayName: Icon
+componentName: icon
+componentHeading: sp-icon
+partType: api
+tags:
+    - icon
+---
+
+### Attributes and Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Property
+</th>
+
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+
+<th class="spectrum-Table-headCell">
+Type
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>label</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>label</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>string | undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>name</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>name</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>string | undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>'s' | 'm' | 'l' | 'xl' | 'xxl' | undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>src</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>src</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>string | undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+
+
+### CSS Custom Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-400</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-500</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-600</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-arrow-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-asterisk-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-100)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-asterisk-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-asterisk-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-asterisk-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-static-size-100)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-400</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-50</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-500</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-600</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-checkmark-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-400</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-500</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-chevron-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cornertriangle-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cornertriangle-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-75)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cornertriangle-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cornertriangle-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-65)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-400</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-500</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-600</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-cross-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-100</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-200</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-300</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-400</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-50</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-500</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-600</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-dash-size-75</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-doublegripper-size-100-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-doublegripper-size-100-width</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-200)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-singlegripper-size-100-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-singlegripper-size-100-width</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-300)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-triplegripper-size-100-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-100)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-ui-icon-triplegripper-size-100-width</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-workflow-icon-size-l</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-workflow-icon-size-m</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-225)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-workflow-icon-size-s</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-200)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-alias-workflow-icon-size-xl</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-275)</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    

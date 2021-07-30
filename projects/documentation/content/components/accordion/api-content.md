@@ -1,0 +1,455 @@
+---
+layout: partial.njk
+title: 'Accordion: Spectrum Web Components'
+displayName: Accordion
+componentName: accordion
+componentHeading: sp-accordion
+partType: api
+tags:
+    - accordion
+---
+
+### Attributes and Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Property
+</th>
+
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+
+<th class="spectrum-Table-headCell">
+Type
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>allowMultiple</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>allow-multiple</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+Allows multiple accordion items to be opened at the same time
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>autofocus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>autofocus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+When this control is rendered, focus it automatically
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+Disable this control. It will not receive focus or events
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>tabIndex</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>tabIndex</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>number</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+The tab index to apply to this control. See general documentation about
+the tabindex HTML property
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### Slots
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>default slot</code>
+</td>
+
+<td class="spectrum-Table-cell">
+The sp-accordion-item children to display.
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### Events
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>keydown</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>Trick :focus-visible polyfill into thinking keyboard based focus</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### CSS Custom Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-background-color-hover</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-200)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-border-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-300)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-600)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-color-disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-400)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-color-hover</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-800)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-gap</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-100)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-125)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-icon-width</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-75)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-border-left-color-key-focus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-color-focus)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-border-left-size-key-focus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-size-thick)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-border-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-size-thin)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-content-padding</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-200)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-padding-x</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-225)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-title-text-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-font-size-50)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-item-title-tracking</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-font-letter-spacing-medium)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-text-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-700)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-text-color-disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-500)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-accordion-text-color-hover</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-900)</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    

@@ -1,0 +1,562 @@
+---
+layout: partial.njk
+title: 'Sidenav: Spectrum Web Components'
+displayName: Sidenav
+componentName: sidenav
+componentHeading: sp-sidenav
+partType: api
+tags:
+    - sidenav
+---
+
+### Attributes and Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Property
+</th>
+
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+
+<th class="spectrum-Table-headCell">
+Type
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>manageTabIndex</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>manage-tab-index</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>value</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>value</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>string | undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### Slots
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>default slot</code>
+</td>
+
+<td class="spectrum-Table-cell">
+the Sidenav Items to display
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### Events
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>change</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>Announces a change in the `value` property of the navigation element. This change can be "canceled" via `event.preventDefault()`.</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### CSS Custom Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-border-radius</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-radius-regular)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-gap-bottom</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-50)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-gap-top</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-200)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-single-line-height)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-padding-x</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-150)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-text-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-700)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-text-font-weight</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-font-weight-medium)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-text-letter-spacing</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-font-letter-spacing-medium)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-heading-text-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-font-size-50)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-icon-gap</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-100)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-background-color-transparent)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color-disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-background-color-transparent)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color-down</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-highlight-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color-hover</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-highlight-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color-key-focus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-highlight-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-background-color-selected</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-highlight-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-border-color-key-focus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-color-focus)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-border-radius</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-radius-regular)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-gap</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-50)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-single-line-height)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-padding-x</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-150)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-color-disabled</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color-disabled)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-color-hover</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-color-key-focus</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-color-selected</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color-hover)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-font-weight</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-font-weight-regular)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-item-text-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-font-size-default)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-multilevel-item-indentation</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-150)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-sidenav-multilevel-main-item-font-weight</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-font-weight-bold)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-tabs-m-focus-ring-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-size-thick)</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    

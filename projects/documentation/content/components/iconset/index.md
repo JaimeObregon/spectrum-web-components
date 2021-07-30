@@ -1,0 +1,9 @@
+---
+layout: examples.njk
+title: 'Iconset: Spectrum Web Components'
+displayName: Iconset
+componentName: iconset
+componentHeading: iconset
+tags:
+  - component-examples
+---

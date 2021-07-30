@@ -1,0 +1,299 @@
+---
+layout: partial.njk
+title: 'Popover: Spectrum Web Components'
+displayName: Popover
+componentName: popover
+componentHeading: sp-popover
+partType: api
+tags:
+    - popover
+---
+
+### Attributes and Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Property
+</th>
+
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+
+<th class="spectrum-Table-headCell">
+Type
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>undefined</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>dialog</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>Boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+
+<td class="spectrum-Table-cell">
+Adds some padding to the popover
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>open</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>open</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+The open state of the popover
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>placement</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>placement</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>"auto" | "auto-start" | "auto-end" | "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end" | "none"</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>'none'</code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>tip</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>tip</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+
+<td class="spectrum-Table-cell">
+
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+### Slots
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>default slot</code>
+</td>
+
+<td class="spectrum-Table-cell">
+content to display within the Popover
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    
+
+
+### CSS Custom Properties
+
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+
+<th class="spectrum-Table-headCell">
+Name
+</th>
+
+<th class="spectrum-Table-headCell">
+Default
+</th>
+
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-picker-m-popover-offset-y</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-75)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-background-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-50)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-border-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-color-dark)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-border-radius</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-radius-regular)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-border-size</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-border-size-thin)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-min-height</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-400)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-min-width</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-dimension-size-400)</code>
+</td>
+
+</tr>
+
+<tr class="spectrum-Table-row">
+
+<td class="spectrum-Table-cell">
+<code>--spectrum-popover-shadow-color</code>
+</td>
+
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-dropshadow-color)</code>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+    

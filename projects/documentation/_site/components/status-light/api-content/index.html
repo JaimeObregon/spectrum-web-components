@@ -1,0 +1,445 @@
+<sp-tab-panel class="section" value="api">
+    <h3 id="attributes-and-properties">Attributes and Properties&nbsp;<sp-link class="header-anchor" href="#attributes-and-properties" aria-label="§">#</sp-link></h3>
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+<th class="spectrum-Table-headCell">
+Property
+</th>
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+<th class="spectrum-Table-headCell">
+Type
+</th>
+<th class="spectrum-Table-headCell">
+Default
+</th>
+<th class="spectrum-Table-headCell">
+Description
+</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+A status light in a disabled state shows that a status exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a status may become available later.
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>variant</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>variant</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>| 'negative'
+        | 'notice'
+        | 'positive'
+        | 'info'
+        | 'neutral'
+        | 'yellow'
+        | 'fuchsia'
+        | 'indigo'
+        | 'seafoam'
+        | 'chartreuse'
+        | 'magenta'
+        | 'celery'
+        | 'purple'</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>'info'</code>
+</td>
+<td class="spectrum-Table-cell">
+The visual variant to apply to this status light.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="slots">Slots&nbsp;<sp-link class="header-anchor" href="#slots" aria-label="§">#</sp-link></h3>
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+<th class="spectrum-Table-headCell">
+Name
+</th>
+<th class="spectrum-Table-headCell">
+Description
+</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>default slot</code>
+</td>
+<td class="spectrum-Table-cell">
+text label of the Status Light
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="css-custom-properties">CSS Custom Properties&nbsp;<sp-link class="header-anchor" href="#css-custom-properties" aria-label="§">#</sp-link></h3>
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+<th class="spectrum-Table-headCell">
+Name
+</th>
+<th class="spectrum-Table-headCell">
+Default
+</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-celery-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-celery-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-chartreuse-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-chartreuse-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-fuchsia-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-fuchsia-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-indigo-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-indigo-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-dot-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-1-size-l)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-height-l)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-text-font-weight</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-body-text-font-weight)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-text-gap</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-gap-l)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-text-line-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-component-text-line-height)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-l-text-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-text-size-l)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-semantic-informative-color-status)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-dot-color-disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-dot-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-1-size-m)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-height-m)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-color-disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-text-color-disabled)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-font-weight</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-body-text-font-weight)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-gap</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-gap-m)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-line-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-component-text-line-height)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-m-text-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-text-size-m)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-dot-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-1-size-s)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-height-s)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-text-font-weight</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-body-text-font-weight)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-text-gap</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-gap-s)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-text-line-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-component-text-line-height)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-s-text-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-text-size-s)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-dot-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-1-size-xl)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-height-xl)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-text-font-weight</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-body-text-font-weight)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-text-gap</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-control-gap-xl)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-text-line-height</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-component-text-line-height)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-info-xl-text-size</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-item-text-size-xl)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-magenta-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-magenta-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-negative-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-semantic-negative-color-status)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-neutral-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-gray-500)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-neutral-m-text-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-alias-label-text-color)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-notice-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-semantic-notice-color-status)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-positive-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-semantic-positive-color-status)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-purple-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-purple-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-seafoam-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-seafoam-400)</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>--spectrum-statuslight-yellow-m-dot-color</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>var(--spectrum-global-color-yellow-400)</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</sp-tab-panel>

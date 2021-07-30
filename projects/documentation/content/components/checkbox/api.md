@@ -1,0 +1,9 @@
+---
+layout: api.njk
+title: 'Checkbox API: Spectrum Web Components'
+displayName: Checkbox
+componentName: checkbox
+componentHeading: sp-checkbox
+tags:
+  - component-api
+---
