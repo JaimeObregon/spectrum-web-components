@@ -18,6 +18,7 @@ import {
     TemplateResult,
     PropertyValues,
     ifDefined,
+    SizedMixin,
 } from '@spectrum-web-components/base';
 import { FocusVisiblePolyfillMixin } from '@spectrum-web-components/shared/src/focus-visible.js';
 import '@spectrum-web-components/asset/sp-asset.js';
@@ -42,9 +43,14 @@ import detailStyles from '@spectrum-web-components/styles/detail.js';
  * @slot actions - an `sp-action-menu` element outlining actions to take on the represened object
  * @slot footer - Footer text
  */
-export class Card extends ObserveSlotPresence(
-    FocusVisiblePolyfillMixin(SpectrumElement),
-    ['[slot="cover-photo"]', '[slot="preview"]']
+export class Card extends SizedMixin(
+    ObserveSlotPresence(FocusVisiblePolyfillMixin(SpectrumElement), [
+        '[slot="cover-photo"]',
+        '[slot="preview"]',
+    ]),
+    {
+        validSizes: ['s', 'm'],
+    }
 ) {
     public static get styles(): CSSResultArray {
         return [headingStyles, detailStyles, cardStyles];
@@ -64,9 +70,6 @@ export class Card extends ObserveSlotPresence(
 
     @property({ type: Boolean, reflect: true })
     public horizontal = false;
-
-    @property({ type: String, reflect: true })
-    public size?: 's';
 
     @property({ type: Boolean, reflect: true })
     public focused = false;

@@ -21,12 +21,6 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     overflow: hidden; /* .spectrum-Icon:not(:root),
    * .spectrum-UIIcon:not(:root) */
 }
-@media (forced-colors: active) {
-    .spectrum-UIIcon,
-    :host {
-        forced-color-adjust: auto;
-    }
-}
 :host {
     --spectrum-icon-size-s: var(
         --spectrum-alias-workflow-icon-size-s,

@@ -11,13 +11,17 @@ governing permissions and limitations under the License.
 
 THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 :host {
-    --spectrum-slider-handle-border-size: var(
-        --spectrum-slider-m-handle-border-size,
+    --spectrum-slider-tick-mark-width: var(
+        --spectrum-slider-m-tick-mark-width,
         var(--spectrum-alias-border-size-thick)
     ); /* .spectrum-Slider */
-    --spectrum-slider-handle-border-size-down: var(
-        --spectrum-slider-m-handle-border-size-down,
-        var(--spectrum-global-dimension-size-75)
+    --spectrum-slider-tick-mark-height: var(
+        --spectrum-slider-m-tick-mark-height,
+        var(--spectrum-global-dimension-size-125)
+    );
+    --spectrum-slider-tick-mark-border-radius: var(
+        --spectrum-slider-m-tick-mark-border-radius,
+        var(--spectrum-alias-border-radius-xsmall)
     );
     --spectrum-slider-track-border-radius: var(
         --spectrum-slider-m-track-border-radius,
@@ -27,67 +31,59 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
         --spectrum-slider-m-track-height,
         var(--spectrum-alias-border-size-thick)
     );
+    --spectrum-slider-handle-width: var(
+        --spectrum-slider-m-handle-width,
+        var(--spectrum-global-dimension-size-175)
+    );
     --spectrum-slider-handle-gap: var(
         --spectrum-slider-m-handle-gap,
         var(--spectrum-alias-border-size-thicker)
     );
-    --spectrum-slider-animation-duration: var(
-        --spectrum-slider-m-animation-duration,
-        var(--spectrum-global-animation-duration-100)
-    );
-    --spectrum-slider-height: var(
-        --spectrum-slider-m-height,
-        var(--spectrum-alias-item-height-m)
-    );
-    --spectrum-slider-min-width: var(
-        --spectrum-slider-m-min-width,
-        var(--spectrum-global-dimension-size-1250)
-    );
-    --spectrum-slider-handle-width: var(
-        --spectrum-slider-m-handle-width,
-        var(--spectrum-alias-item-control-2-size-l)
-    );
-    --spectrum-slider-handle-height: var(
-        --spectrum-slider-m-handle-height,
-        var(--spectrum-alias-item-control-2-size-l)
+    --spectrum-slider-handle-border-size: var(
+        --spectrum-slider-m-handle-border-size,
+        var(--spectrum-alias-border-size-thick)
     );
     --spectrum-slider-handle-border-radius: var(
         --spectrum-slider-m-handle-border-radius,
         var(--spectrum-global-dimension-size-100)
     );
-    --spectrum-slider-label-gap-x: var(
-        --spectrum-slider-m-label-gap-x,
-        var(--spectrum-alias-item-control-gap-m)
+    --spectrum-slider-height: var(
+        --spectrum-slider-m-height,
+        var(--spectrum-global-dimension-size-400)
     );
-    --spectrum-slider-tick-mark-width: var(
-        --spectrum-slider-tick-m-mark-width,
-        var(--spectrum-alias-border-size-thick)
+    --spectrum-slider-min-width: var(
+        --spectrum-slider-m-min-width,
+        var(--spectrum-global-dimension-size-1250)
     );
-    --spectrum-slider-tick-mark-border-radius: var(
-        --spectrum-slider-tick-m-mark-border-radius,
-        var(--spectrum-alias-border-radius-xsmall)
+    --spectrum-slider-animation-duration: var(
+        --spectrum-slider-m-animation-duration,
+        var(--spectrum-global-animation-duration-100)
     );
-    --spectrum-slider-tick-mark-height: var(
-        --spectrum-slider-tick-m-mark-height,
-        var(--spectrum-global-dimension-size-125)
+    --spectrum-slider-ramp-track-color-disabled: var(
+        --spectrum-slider-m-ramp-track-color-disabled,
+        var(--spectrum-global-color-gray-300)
+    );
+    --spectrum-slider-ramp-track-height: var(
+        --spectrum-slider-m-ramp-track-height,
+        var(--spectrum-global-dimension-size-200)
     );
     --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
     --spectrum-slider-controls-margin: calc(
-        var(--spectrum-slider-handle-width) / 2
+        var(--spectrum-slider-handle-width-adjusted) / 2
     );
     --spectrum-slider-track-margin-offset: calc(
         var(--spectrum-slider-controls-margin) * -1
     );
     --spectrum-slider-handle-margin-top: calc(
-        var(--spectrum-slider-handle-width) / -2
+        var(--spectrum-slider-handle-width-adjusted) / -2
     );
     --spectrum-slider-handle-margin-left: calc(
-        var(--spectrum-slider-handle-width) / -2
+        var(--spectrum-slider-handle-width-adjusted) / -2
     );
     --spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
     --spectrum-slider-track-middle-handleoffset: calc(
-        var(--spectrum-slider-handle-gap) + var(--spectrum-slider-handle-width) /
-            2
+        var(--spectrum-slider-handle-gap) +
+            var(--spectrum-slider-handle-width-adjusted) / 2
     );
     --spectrum-slider-input-top: calc(
         var(--spectrum-slider-handle-margin-top) / 4
@@ -103,6 +99,18 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     --spectrum-slide-label-text-line-height: var(
         --spectrum-global-font-line-height-small,
         1.3
+    );
+    --spectrum-slide-label-margin-bottom: -3px;
+    --spectrum-slider-label-gap-x: var(
+        --spectrum-alias-item-control-gap-m,
+        var(--spectrum-global-dimension-size-125)
+    );
+    --spectrum-slider-handle-width-adjusted: calc(
+        var(--spectrum-slider-handle-width) +
+            var(--spectrum-slider-handle-border-size)
+    );
+    --spectrum-slider-handle-height-adjusted: var(
+        --spectrum-slider-handle-width-adjusted
     );
 }
 :host {
@@ -447,20 +455,12 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     ); /* [dir=rtl] .spectrum-Slider-ramp */
 }
 #ramp {
-    height: var(
-        --spectrum-slider-ramp-track-height,
-        var(--spectrum-global-dimension-static-size-200)
-    );
+    height: var(--spectrum-slider-ramp-track-height);
     margin-top: var(
         --spectrum-slider-ramp-margin-top
     ); /* .spectrum-Slider-ramp */
     position: absolute;
-    top: calc(
-        var(
-                --spectrum-slider-ramp-track-height,
-                var(--spectrum-global-dimension-static-size-200)
-            ) / 2
-    );
+    top: calc(var(--spectrum-slider-ramp-track-height) / 2);
 }
 :host([dir='rtl']) #ramp svg {
     transform: matrix(
@@ -484,14 +484,14 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 :host([dir='ltr']) .handle {
     margin-left: calc(
-        var(--spectrum-slider-handle-width) / -2
+        var(--spectrum-slider-handle-width-adjusted) / -2
     ); /* [dir=ltr] .spectrum-Slider-handle */
     margin-right: 0;
 }
 :host([dir='rtl']) .handle {
     margin-left: 0;
     margin-right: calc(
-        var(--spectrum-slider-handle-width) / -2
+        var(--spectrum-slider-handle-width-adjusted) / -2
     ); /* [dir=rtl] .spectrum-Slider-handle */
 }
 .handle {
@@ -500,7 +500,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     border-width: var(--spectrum-slider-handle-border-size);
     box-sizing: border-box;
     display: inline-block;
-    height: var(--spectrum-slider-handle-height);
+    height: var(--spectrum-slider-handle-height-adjusted);
     margin-bottom: 0;
     margin-top: var(--spectrum-slider-handle-margin-top);
     outline: none;
@@ -508,14 +508,14 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     top: calc(var(--spectrum-slider-height) / 2);
     transition: border-width var(--spectrum-slider-animation-duration)
         ease-in-out;
-    width: var(--spectrum-slider-handle-width);
+    width: var(--spectrum-slider-handle-width-adjusted);
     z-index: 2;
 }
 .handle.dragging,
 .handle.handle-highlight,
 .handle:active {
     border-width: var(
-        --spectrum-slider-handle-border-size-down
+        --spectrum-slider-handle-border-size
     ); /* .spectrum-Slider-handle:active,
    * .spectrum-Slider-handle.is-focused,
    * .spectrum-Slider-handle.is-dragged */
@@ -533,7 +533,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     border-radius: 100%;
     content: ' '; /* .spectrum-Slider-handle:before */
     display: block;
-    height: var(--spectrum-slider-handle-height);
+    height: var(--spectrum-slider-handle-height-adjusted);
     left: 50%;
     position: absolute;
     top: 50%;
@@ -542,18 +542,18 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
             ease-out,
         width var(--spectrum-global-animation-duration-100, 0.13s) ease-out,
         height var(--spectrum-global-animation-duration-100, 0.13s) ease-out;
-    width: var(--spectrum-slider-handle-width);
+    width: var(--spectrum-slider-handle-width-adjusted);
 }
 .handle.handle-highlight:before {
     height: calc(
-        var(--spectrum-slider-handle-height) +
+        var(--spectrum-slider-handle-height-adjusted) +
             var(
                 --spectrum-alias-focus-ring-gap,
                 var(--spectrum-global-dimension-static-size-25)
             ) * 2
     );
     width: calc(
-        var(--spectrum-slider-handle-width) +
+        var(--spectrum-slider-handle-width-adjusted) +
             var(
                 --spectrum-alias-focus-ring-gap,
                 var(--spectrum-global-dimension-static-size-25)
@@ -574,7 +574,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     -webkit-appearance: none;
     border: 0;
     cursor: default;
-    height: var(--spectrum-slider-handle-height);
+    height: var(--spectrum-slider-handle-height-adjusted);
     margin: 0; /* .spectrum-Slider-input */
     opacity: 0.000001;
     overflow: hidden;
@@ -582,7 +582,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     pointer-events: none;
     position: absolute;
     top: var(--spectrum-slider-input-top);
-    width: var(--spectrum-slider-handle-width);
+    width: var(--spectrum-slider-handle-width-adjusted);
 }
 .input:focus {
     outline: none; /* .spectrum-Slider-input:focus */
@@ -591,6 +591,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     display: flex; /* .spectrum-Slider-labelContainer */
     font-size: var(--spectrum-slide-label-text-size);
     line-height: var(--spectrum-slide-label-text-line-height);
+    margin-bottom: var(--spectrum-slide-label-margin-bottom);
     padding-top: var(
         --spectrum-fieldlabel-m-padding-top,
         var(--spectrum-global-dimension-size-50)
@@ -709,7 +710,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
     pointer-events: none;
 }
 :host {
-    --spectrum-slider-m-focus-ring-size-key-focus: var(
+    --spectrum-slider-m-focus-ring-size: var(
         --spectrum-alias-focus-ring-size,
         var(--spectrum-global-dimension-static-size-25)
     ); /* .spectrum-Slider */
@@ -783,7 +784,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 .handle.handle-highlight:before {
     box-shadow: 0 0 0
         var(
-            --spectrum-slider-m-focus-ring-size-key-focus,
+            --spectrum-slider-m-focus-ring-size,
             var(--spectrum-alias-focus-ring-size)
         )
         var(--spectrum-slider-m-handle-focus-ring-color-key-focus); /* .spectrum-Slider-handle.is-focused:before */
@@ -808,13 +809,13 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 .tick:after {
     background-color: var(
-        --spectrum-slider-tick-m-mark-color,
-        var(--spectrum-alias-track-color-default)
+        --spectrum-slider-m-tick-mark-color,
+        var(--spectrum-global-color-gray-400)
     ); /* .spectrum-Slider-tick:after */
 }
 .handle.dragging {
     background: var(
-        --spectrum-slider-m-handle-background-color-down,
+        --spectrum-slider-m-handle-background-color,
         var(--spectrum-alias-background-color-transparent)
     );
     border-color: var(
@@ -875,8 +876,7 @@ THIS FILE IS MACHINE GENERATED. DO NOT EDIT */
 }
 :host([disabled]) #ramp path {
     fill: var(
-        --spectrum-slider-ramp-track-color-disabled,
-        var(--spectrum-global-color-gray-200)
+        --spectrum-slider-ramp-track-color-disabled
     ); /* .spectrum-Slider.is-disabled .spectrum-Slider-ramp path */
 }
 :host([disabled][variant='range'])
