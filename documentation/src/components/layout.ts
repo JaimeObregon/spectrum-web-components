@@ -18,18 +18,15 @@ import {
     PropertyValues,
     TemplateResult,
 } from '@spectrum-web-components/base';
-import '@spectrum-web-components/theme/sp-theme.js';
 import '@spectrum-web-components/theme/src/themes.js';
-import { Color, Scale } from '@spectrum-web-components/theme';
-import './side-nav.js';
+import { Theme, Color, Scale } from '@spectrum-web-components/theme';
+import { DocsSideNav } from './side-nav.js';
 import layoutStyles from './layout.css';
-import '@spectrum-web-components/field-label/sp-field-label.js';
+import { FieldLabel } from '@spectrum-web-components/field-label';
 import { Picker } from '@spectrum-web-components/picker';
-import '@spectrum-web-components/picker/sp-picker.js';
-import '@spectrum-web-components/menu/sp-menu.js';
-import '@spectrum-web-components/menu/sp-menu-item.js';
-import '@spectrum-web-components/action-button/sp-action-button.js';
-import '@spectrum-web-components/toast/sp-toast.js';
+import { Menu, MenuItem } from '@spectrum-web-components/menu';
+import { ActionButton } from '@spectrum-web-components/action-button';
+import { Toast } from '@spectrum-web-components/toast';
 
 const SWC_THEME_COLOR_KEY = 'swc-docs:theme:color';
 const SWC_THEME_SCALE_KEY = 'swc-docs:theme:scale';
@@ -65,6 +62,17 @@ export class LayoutElement extends SpectrumElement {
     public static get styles(): CSSResultArray {
         return [layoutStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-field-label': FieldLabel,
+        'sp-picker': Picker,
+        'sp-menu': Menu,
+        'sp-menu-item': MenuItem,
+        'sp-action-button': ActionButton,
+        'sp-toast': Toast,
+        'sp-theme': Theme,
+        'docs-side-nav': DocsSideNav,
+    };
 
     @property({ attribute: false })
     private alerts: Map<
@@ -337,7 +345,6 @@ export class LayoutElement extends SpectrumElement {
 
     connectedCallback() {
         super.connectedCallback();
-        import('./code-example.js');
         isNarrowMediaQuery.addEventListener(
             'change',
             this.handleMatchMediaChange

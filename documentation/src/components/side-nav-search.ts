@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import {
-    LitElement,
+    SpectrumElement,
     html,
     CSSResultArray,
     TemplateResult,
@@ -19,18 +19,13 @@ import {
     query,
 } from '@spectrum-web-components/base';
 import sideNavSearchMenuStyles from './side-nav-search.css';
-import { Search } from '@spectrum-web-components/search';
 import { Overlay } from '@spectrum-web-components/overlay';
-import '@spectrum-web-components/search/sp-search.js';
-import '@spectrum-web-components/popover/sp-popover.js';
-import '@spectrum-web-components/menu/sp-menu.js';
-import '@spectrum-web-components/menu/sp-menu-group.js';
-import '@spectrum-web-components/menu/sp-menu-item.js';
-import '@spectrum-web-components/illustrated-message/sp-illustrated-message.js';
+import { Search } from '@spectrum-web-components/search';
+import { Popover } from '@spectrum-web-components/popover';
+import { Menu, MenuItem, MenuGroup } from '@spectrum-web-components/menu';
+import { IllustratedMessage } from '@spectrum-web-components/illustrated-message';
 import { AppRouter } from '../router.js';
 import { search, ResultGroup } from './search-index.js';
-import { Menu } from '@spectrum-web-components/menu';
-import { Popover } from '@spectrum-web-components/popover';
 
 declare global {
     interface Window {
@@ -40,7 +35,20 @@ declare global {
 
 window.Overlay = Overlay;
 
-class SearchComponent extends LitElement {
+export class SideNavSearch extends SpectrumElement {
+    public static get styles(): CSSResultArray {
+        return [sideNavSearchMenuStyles];
+    }
+
+    public static elementDefinitions = {
+        'sp-search': Search,
+        'sp-popover': Popover,
+        'sp-menu': Menu,
+        'sp-menu-item': MenuItem,
+        'sp-menu-group': MenuGroup,
+        'sp-illustrated-message': IllustratedMessage,
+    };
+
     private closeOverlay?: () => void;
 
     private searchResultsPopover: Popover | null = null;
@@ -50,10 +58,6 @@ class SearchComponent extends LitElement {
 
     @query('sp-search')
     private searchField!: HTMLElement;
-
-    public static get styles(): CSSResultArray {
-        return [sideNavSearchMenuStyles];
-    }
 
     @property({ type: Array })
     public results: ResultGroup[] = [];
@@ -181,5 +185,3 @@ class SearchComponent extends LitElement {
         `;
     }
 }
-
-customElements.define('docs-search', SearchComponent);

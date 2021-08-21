@@ -17,23 +17,30 @@ import {
     PropertyValues,
     TemplateResult,
 } from '@spectrum-web-components/base';
-import '@spectrum-web-components/underlay/sp-underlay.js';
-import '@spectrum-web-components/sidenav/sp-sidenav.js';
-import '@spectrum-web-components/sidenav/sp-sidenav-item.js';
+import { Underlay } from '@spectrum-web-components/underlay';
 import {
     SidenavSelectDetail,
+    SideNav,
     SideNavItem,
 } from '@spectrum-web-components/sidenav';
 import { AppRouter } from '../router.js';
-import './side-nav-search.js';
+import { SideNavSearch } from './side-nav-search.js';
 import { search, Result } from './search-index.js';
 import sideNavStyles from './side-nav.css';
-import './adobe-logo.js';
+import { Logo } from './adobe-logo.js';
 
-class SideNav extends SpectrumElement {
+export class DocsSideNav extends SpectrumElement {
     public static get styles(): CSSResultArray {
         return [sideNavStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-underlay': Underlay,
+        'sp-sidenav': SideNav,
+        'sp-sidenav-item': SideNavItem,
+        'docs-spectrum-logo': Logo,
+        'docs-search': SideNavSearch,
+    };
 
     public shadowRoot!: ShadowRoot;
 
@@ -180,5 +187,3 @@ class SideNav extends SpectrumElement {
         }
     }
 }
-
-customElements.define('docs-side-nav', SideNav);

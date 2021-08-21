@@ -14,15 +14,25 @@ import { html, CSSResultArray } from '@spectrum-web-components/base';
 import { RouteComponent } from './route-component.js';
 import componentStyles from './markdown.css';
 import homeStyles from './home.css';
+import { Button } from '@spectrum-web-components/button';
+import { ButtonGroup } from '@spectrum-web-components/button-group';
+import { Link } from '@spectrum-web-components/link';
+import { Divider } from '@spectrum-web-components/divider';
+import { CodeExample } from './code-example.js';
 import '@spectrum-web-components/button/sp-button.js';
-import '@spectrum-web-components/button-group/sp-button-group.js';
-import '@spectrum-web-components/link/sp-link.js';
-import '@spectrum-web-components/divider/sp-divider.js';
 
 class HomeElement extends RouteComponent {
     public static get styles(): CSSResultArray {
         return [componentStyles, homeStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-link': Link,
+        'sp-button': Button,
+        'sp-button-group': ButtonGroup,
+        'sp-divider': Divider,
+        'code-example': CodeExample,
+    };
 
     render() {
         // prettier-ignore

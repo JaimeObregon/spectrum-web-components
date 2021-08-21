@@ -38,10 +38,9 @@ import { RouteComponent } from './route-component.js';
 import markdownStyles from './markdown.css';
 import componentStyles from './component.css';
 import { AppRouter } from '../router.js';
-import '@spectrum-web-components/tabs/sp-tab.js';
-import '@spectrum-web-components/tabs/sp-tabs.js';
-import '@spectrum-web-components/tabs/sp-tab-panel.js';
-import { Tabs } from '@spectrum-web-components/tabs';
+import { Tab, Tabs, TabPanel } from '@spectrum-web-components/tabs';
+import { Divider } from '@spectrum-web-components/divider';
+import { CodeExample } from './code-example.js';
 import docs from '../../custom-elements.json';
 import type {
     CustomElement,
@@ -117,6 +116,18 @@ function buildTable(
 }
 
 class ComponentElement extends RouteComponent {
+    public static get styles(): CSSResultArray {
+        return [markdownStyles, componentStyles];
+    }
+
+    public static elementDefinitions = {
+        'sp-tab': Tab,
+        'sp-tabs': Tabs,
+        'sp-tab-panel': TabPanel,
+        'sp-divider': Divider,
+        'code-example': CodeExample,
+    };
+
     public location?: {
         baseUrl: string;
         params: {
@@ -127,10 +138,6 @@ class ComponentElement extends RouteComponent {
     };
 
     private docsLoaded = false;
-
-    public static get styles(): CSSResultArray {
-        return [markdownStyles, componentStyles];
-    }
 
     public get componentName(): string {
         if (this.location) {

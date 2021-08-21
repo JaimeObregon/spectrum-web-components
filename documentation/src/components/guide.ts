@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 import { html, CSSResultArray } from '@spectrum-web-components/base';
-import '@spectrum-web-components/link/sp-link.js';
-import '@spectrum-web-components/button/sp-button.js';
+import { Link } from '@spectrum-web-components/link';
+import { Button } from '@spectrum-web-components/button';
 import '@spectrum-web-components/theme/theme-lightest.js';
 import '@spectrum-web-components/theme/scale-medium.js';
 import './layout.js';
@@ -31,6 +31,11 @@ class GuideElement extends RouteComponent {
     public static get styles(): CSSResultArray {
         return [componentStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-link': Link,
+        'sp-button': Button,
+    };
 
     public get componentName(): string {
         if (this.location) {

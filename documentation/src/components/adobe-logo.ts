@@ -18,7 +18,7 @@ import {
 } from '@spectrum-web-components/base';
 import logoStyles from './adobe-logo.css';
 
-class SpectrumLogo extends LitElement {
+export class Logo extends LitElement {
     @property({ type: String })
     public size: string = '36px';
 
@@ -45,4 +45,3 @@ class SpectrumLogo extends LitElement {
         `;
     }
 }
-customElements.define('docs-spectrum-logo', SpectrumLogo);

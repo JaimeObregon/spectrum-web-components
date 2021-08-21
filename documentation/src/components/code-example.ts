@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 import {
     LitElement,
     html,
-    customElement,
     TemplateResult,
     CSSResultArray,
     property,
@@ -32,8 +31,11 @@ import { copyNode } from './copy-to-clipboard.js';
 import { TrackTheme } from './layout.js';
 import { Color } from '@spectrum-web-components/theme';
 
-@customElement('code-example')
 export class CodeExample extends FocusVisiblePolyfillMixin(LitElement) {
+    public static get styles(): CSSResultArray {
+        return [Styles, StylesLight, StylesDark];
+    }
+
     @query('#markup')
     private markup?: HTMLDivElement;
 
@@ -42,10 +44,6 @@ export class CodeExample extends FocusVisiblePolyfillMixin(LitElement) {
 
     @property()
     protected codeTheme: 'dark' | 'light' = 'dark';
-
-    public static get styles(): CSSResultArray {
-        return [Styles, StylesLight, StylesDark];
-    }
 
     public get code(): string {
         return stripIndent`${this.textContent}` || '';
