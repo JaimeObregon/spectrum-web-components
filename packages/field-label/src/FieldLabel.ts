@@ -21,7 +21,7 @@ import {
     query,
 } from '@spectrum-web-components/base';
 import type { Focusable } from '@spectrum-web-components/shared';
-import '@spectrum-web-components/icons-ui/icons/sp-icon-asterisk100.js';
+import { IconAsterisk100 } from '@spectrum-web-components/icons-ui/src/elements/IconAsterisk100.js';
 import asteriskIconStyles from '@spectrum-web-components/icon/src/spectrum-icon-asterisk.css.js';
 
 import styles from './field-label.css.js';
@@ -37,6 +37,10 @@ export class FieldLabel extends SizedMixin(SpectrumElement) {
     public static get styles(): CSSResultArray {
         return [styles, asteriskIconStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-icon-asterisk100': IconAsterisk100,
+    };
 
     /**
      * @private

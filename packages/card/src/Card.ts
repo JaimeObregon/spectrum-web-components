@@ -20,12 +20,11 @@ import {
     ifDefined,
 } from '@spectrum-web-components/base';
 import { FocusVisiblePolyfillMixin } from '@spectrum-web-components/shared/src/focus-visible.js';
-import '@spectrum-web-components/asset/sp-asset.js';
+import { Asset } from '@spectrum-web-components/asset';
 
 import { ObserveSlotPresence } from '@spectrum-web-components/shared';
-import { Checkbox } from '@spectrum-web-components/checkbox/src/Checkbox';
-import '@spectrum-web-components/checkbox/sp-checkbox.js';
-import '@spectrum-web-components/quick-actions/sp-quick-actions.js';
+import { Checkbox } from '@spectrum-web-components/checkbox';
+import { QuickActions } from '@spectrum-web-components/quick-actions';
 import cardStyles from './card.css.js';
 import headingStyles from '@spectrum-web-components/styles/heading.js';
 import detailStyles from '@spectrum-web-components/styles/detail.js';
@@ -49,6 +48,12 @@ export class Card extends ObserveSlotPresence(
     public static get styles(): CSSResultArray {
         return [headingStyles, detailStyles, cardStyles];
     }
+
+    public static elementDefinitions = {
+        'sp-asset': Asset,
+        'sp-checkbox': Checkbox,
+        'sp-quick-actions': QuickActions,
+    };
 
     @property()
     public asset?: 'file' | 'folder';
